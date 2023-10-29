@@ -1,0 +1,68 @@
+@import "../../../Shared/variables.scss";
+
+.reviews {
+  padding: 100px 180px;
+
+  h3 {
+    text-align: center;
+    color: $black;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .reviews {
+    padding: 70px 100px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .reviews {
+    padding: 60px 30px;
+
+    h3 {
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .reviews {
+    padding: 50px 30px;
+
+    h3 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .reviews {
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+}

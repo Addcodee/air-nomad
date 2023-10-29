@@ -1,0 +1,41 @@
+@import "../../../Shared/variables.scss";
+
+.countryToures {
+  padding: 100px 120px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .countryToures {
+    padding: 70px 60px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .countryToures {
+    padding: 60px 30px;
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .countryToures {
+    padding: 40px 20px;
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}

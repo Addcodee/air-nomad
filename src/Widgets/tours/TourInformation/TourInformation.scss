@@ -1,0 +1,81 @@
+@import "../../../Shared/variables.scss";
+
+.tourInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__aboutTour,
+  &__aboutHotel,
+  &__guide {
+    padding: 30px;
+    border-radius: $radius;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4 {
+      padding: 10px;
+      color: $black;
+      border-radius: $radius;
+      border: 1px solid rgba(22, 22, 22, 0.2);
+      width: fit-content;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+  &__punkt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h5 {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        font-weight: 500;
+        line-height: 20px;
+
+        span {
+          font-weight: 600;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .tourInformation {
+    &__aboutTour,
+    &__aboutHotel,
+    &__guide {
+      padding: 20px;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    &__punkt {
+      h5 {
+        font-size: 24px;
+      }
+
+      &-description {
+        p {
+          font-weight: 500;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

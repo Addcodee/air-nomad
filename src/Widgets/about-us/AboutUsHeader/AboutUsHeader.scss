@@ -1,0 +1,106 @@
+@import "../../../Shared/variables.scss";
+
+.aboutUsHeader {
+  height: 600px;
+  padding: 100px 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
+  h2 {
+    font-size: 82px;
+    position: relative;
+    z-index: 1;
+  }
+
+  p {
+    width: 800px;
+    position: relative;
+    z-index: 1;
+
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.aboutUsFilter {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 600px;
+  background-color: $red;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1440px) {
+  .aboutUsHeader {
+    max-height: 600px;
+    padding: 70px 100px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .aboutUsHeader {
+    height: 550px;
+    padding: 70px 30px;
+
+    h2 {
+      font-size: 76px;
+    }
+
+    p {
+      width: 800px;
+      font-size: 22px;
+    }
+  }
+
+  .aboutUsFilter {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .aboutUsHeader {
+    height: 520px;
+    padding: 60px 30px;
+    text-align: center;
+
+    h2 {
+      font-size: 72px;
+    }
+
+    p {
+      width: auto;
+      font-size: 20px;
+    }
+  }
+
+  .aboutUsFilter {
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutUsHeader {
+    height: 500px;
+    padding: 60px 10px;
+
+    h2 {
+      font-size: 52px;
+    }
+
+    p {
+      width: auto;
+      font-size: 16px;
+    }
+  }
+
+  .aboutUsFilter {
+    height: 500px;
+  }
+}

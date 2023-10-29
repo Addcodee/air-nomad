@@ -1,0 +1,185 @@
+@import "../../../Shared/variables.scss";
+
+.howWeWork {
+  padding: 100px 180px;
+  background-color: #fff;
+
+  h3 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: $black;
+  }
+
+  &__methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 70px;
+
+    .howWeWork__icon {
+      background-color: $red;
+      width: fit-content;
+      padding: 10px;
+      border-radius: $radius;
+    }
+
+    &_item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      color: $black;
+
+      h5 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .howWeWork {
+    padding: 70px 100px;
+
+    h3 {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+
+    &__methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+
+      &_item {
+        gap: 16px;
+
+        h5 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .howWeWork {
+    padding: 50px 30px;
+
+    h3 {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    &__methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+
+      &_item {
+        gap: 14px;
+
+        h5 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .howWeWork {
+    h3 {
+      font-size: 34px;
+    }
+
+    &__methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      &_item {
+        gap: 14px;
+
+        h5 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .howWeWork {
+    padding: 50px 20px;
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    &__methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      &_item {
+        gap: 8px;
+
+        .howWeWork__icon {
+          width: 44px;
+          height: 44px;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        h5 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .howWeWork {
+    &__methods {
+      gap: 35px;
+
+      &_item {
+        gap: 8px;
+
+        h5 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

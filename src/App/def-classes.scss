@@ -1,0 +1,16 @@
+@import "../Shared/variables.scss";
+
+.red-btn {
+  border-radius: $radius;
+  color: white;
+  background-color: $red;
+  font-weight: 500;
+}
+
+.red-btn-outline {
+  background-color: transparent;
+  border-radius: $radius;
+  border: 1px solid $red;
+  color: $red;
+  font-weight: 600;
+}

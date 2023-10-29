@@ -1,0 +1,130 @@
+@import "../../../Shared/variables.scss";
+
+.header {
+  position: relative;
+  height: 850px;
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    aspect-ratio: 18 / 9;
+  }
+
+  &__filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $red;
+    opacity: 0.3;
+  }
+
+  &__main {
+    padding: 0 120px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    color: #fff;
+
+    &_top {
+      h1 {
+        font-size: 106px;
+      }
+
+      p {
+        font-size: 32px;
+        font-weight: 500;
+      }
+    }
+
+    button {
+      width: fit-content;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 720px;
+
+    &__main {
+      padding: 0 60px;
+
+      h1 {
+        font-size: 82px;
+      }
+
+      p {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .header {
+    height: 600px;
+
+    &__main {
+      padding: 0 30px;
+
+      h1 {
+        font-size: 68px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .header {
+    height: 500px;
+
+    &__main {
+      h1 {
+        font-size: 54px;
+      }
+
+      p {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    height: 450px;
+
+    &__main {
+      padding: 40px 20px;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+      button {
+        width: 80%;
+        font-size: 16px;
+      }
+    }
+  }
+}

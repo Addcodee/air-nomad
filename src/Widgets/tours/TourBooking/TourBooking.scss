@@ -1,0 +1,109 @@
+@import "../../../Shared/variables.scss";
+
+.tourBooking {
+  border-radius: $radius;
+  background-color: #fff;
+  padding: 30px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h4 {
+    font-size: 26px;
+    color: $black;
+    font-weight: 600;
+  }
+
+  #price-description {
+    color: $red;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__things {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    #tourBooking-arrival,
+    #tourBooking-departure {
+      padding: 10px 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: $black;
+      padding: 10px 20px;
+      border: 1px solid rgba(22, 22, 22, 0.5);
+
+      h5 {
+        font-size: 16px;
+        opacity: 0.7;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    #tourBooking-arrival {
+      border-radius: 15px 0px 0px 0px;
+    }
+
+    #tourBooking-departure {
+      border-radius: 0px 15px 0px 0px;
+    }
+
+    &_item {
+      grid-column: 1 / 3;
+    }
+
+    &_item:last-child {
+      border-radius: 0px 0px 15px 15px;
+    }
+  }
+
+  #booking-form {
+    color: $black;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .tourBooking {
+    padding: 20px;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    #price-description {
+      color: $red;
+      font-size: 20px;
+    }
+
+    &__things {
+      #tourBooking-arrival,
+      #tourBooking-departure {
+        padding: 10px;
+      }
+
+      div {
+        padding: 10px;
+
+        h5 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

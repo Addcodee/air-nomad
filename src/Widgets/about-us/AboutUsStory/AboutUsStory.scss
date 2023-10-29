@@ -1,0 +1,87 @@
+@import "../../../Shared/variables.scss";
+
+.aboutUsStory {
+  max-width: 1150px;
+  height: 850px;
+  display: flex;
+  gap: 50px;
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h3 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 8 / 16;
+    object-fit: cover;
+    border-radius: $radius;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .aboutUsStory {
+    gap: 30px;
+
+    &__information {
+      h3 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .aboutUsStory {
+    flex-direction: column;
+    height: auto;
+
+    &__information {
+      h3 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutUsStory {
+    &__information {
+      padding: 0 20px;
+
+      h3 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    img {
+      border-radius: 0;
+    }
+  }
+}

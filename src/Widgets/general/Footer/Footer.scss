@@ -1,0 +1,268 @@
+@import "../../../Shared/variables.scss";
+
+.footer {
+  padding: 100px 180px;
+  background-color: #fff;
+
+  &__information {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &_top {
+      h3 {
+        color: $red;
+        font-size: 38px;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: $black;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    &_bottom,
+    &_bottom-resp {
+      display: grid;
+      grid-template-columns: 0.3fr 0.5fr;
+      gap: 30px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li:first-child {
+          font-size: 20px;
+          margin-bottom: 6px;
+          font-weight: 600;
+        }
+
+        li {
+          font-size: 16px;
+          font-weight: 500;
+          color: $black;
+        }
+      }
+
+      #footer-work {
+        grid-column: 2 / 3;
+      }
+    }
+
+    &_bottom-resp {
+      display: none;
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      #footer-agreement {
+        color: $black;
+        font-weight: 500;
+        opacity: 0.6;
+        padding: 0 16px;
+      }
+
+      button {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__border {
+    border-bottom: 2px solid $black;
+    opacity: 0.1;
+    margin: 30px 0;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+
+    img {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+        button {
+          color: $black;
+          font-size: 20px;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 0;
+          text-align: start;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+
+          li {
+            img {
+              width: 24px;
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .footer {
+    padding: 70px 100px;
+
+    &__information {
+      gap: 30px;
+
+      &_bottom {
+        grid-template-columns: 0.5fr 0.5fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer {
+    padding: 60px 30px;
+
+    &__information {
+      gap: 20px;
+
+      &_left {
+        gap: 30px;
+      }
+
+      &_top {
+        h3 {
+          font-size: 34px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      &_bottom {
+        grid-template-columns: 0.5fr 0.5fr;
+      }
+
+      &_right {
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__links {
+      img {
+        width: 200px;
+      }
+
+      ul {
+        gap: 20px;
+
+        li {
+          button {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .footer {
+    padding: 50px 30px;
+
+    &__information {
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      &_bottom {
+        display: none;
+      }
+
+      &_bottom-resp {
+        display: grid;
+      }
+
+      &_top {
+        text-align: center;
+        h3 {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &__links {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    padding: 40px 20px;
+
+    &__information {
+      &_top {
+        h3 {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      &_bottom-resp {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        #footer-work {
+          grid-column: 1 / 2;
+        }
+
+        ul {
+          li:first-child {
+            font-size: 18px;
+          }
+        }
+      }
+
+      &_right {
+        #footer-agreement {
+          padding: 0 10px;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__links {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
